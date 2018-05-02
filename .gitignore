@@ -24,11 +24,8 @@ hs_err_pid*
 .idea/
 build/
 .gradle/
-gradle/
 *.iml
 local.properties
 *.properties
 *.apk
 app/release/
-
-*.iml
