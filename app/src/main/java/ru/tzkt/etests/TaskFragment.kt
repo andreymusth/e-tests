@@ -25,6 +25,8 @@ class TaskFragment : Fragment() {
             val args = Bundle()
             args.putSerializable(TASK_KEY, task)
             val fragment = TaskFragment()
+            fragment.allowEnterTransitionOverlap = false
+            fragment.allowReturnTransitionOverlap = false
             fragment.exitTransition = Slide(Gravity.TOP)
             fragment.enterTransition = Slide(Gravity.BOTTOM)
             fragment.arguments = args
@@ -54,6 +56,11 @@ class TaskFragment : Fragment() {
         var1.text = task!!.variants[0]
         var2.text = task!!.variants[1]
         var3.text = task!!.variants[2]
-        var4.text = task!!.variants[3]
+
+        if (task!!.variants.size == 4) {
+            var4.text = task!!.variants[3]
+        } else {
+            var4.visibility = View.INVISIBLE
+        }
     }
 }

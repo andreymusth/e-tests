@@ -39,7 +39,7 @@
             android:background="@drawable/btn_bottom_bg"
             android:onClick="onBottomButtonClicked"
             android:text="1"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorBlue"
             android:textSize="18sp" />
 
         <Button
@@ -152,7 +152,7 @@
         android:background="@drawable/btn_bg_stroke"
         android:paddingEnd="32dp"
         android:paddingStart="32dp"
-        android:text="prev"
+        android:text="@string/prev"
         android:textAllCaps="false"
         android:textColor="@color/colorBlue"
         android:textSize="30sp"
@@ -168,7 +168,7 @@
         android:background="@drawable/btn_bg_stroke"
         android:paddingEnd="32dp"
         android:paddingStart="32dp"
-        android:text="next"
+        android:text="@string/next"
         android:textAllCaps="false"
         android:textColor="@color/colorBlue"
         android:textSize="30sp"
