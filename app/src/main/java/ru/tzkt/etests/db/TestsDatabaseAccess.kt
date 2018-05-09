@@ -7,7 +7,8 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import ru.tzkt.etests.Task
+import ru.tzkt.etests.models.Task
+import ru.tzkt.etests.utils.random
 
 class TestsDatabaseAccess
 /**
@@ -20,12 +21,37 @@ private constructor(context: Context) {
     private val openHelper: SQLiteOpenHelper
     private var database: SQLiteDatabase? = null
 
+    private fun getRandomTasks(): String {
+        val g = "(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)"
+
+
+        val maxTasks = 55
+
+        val tasksIds = ArrayList<Int>()
+
+        while (tasksIds.size < 10) {
+            val taskId = (1..maxTasks).random()
+
+            if (!tasksIds.contains(taskId)) {
+                tasksIds.add(taskId)
+            }
+        }
+        var res = "("
+
+        for (taskId in tasksIds) {
+            res += "$taskId, "
+        }
+
+        res = res.substring(0 until res.length - 2) + ")"
+
+        return res
+    }
 
     fun getTestsArray(): ArrayList<Task>? {
 
         open()
 
-        val verbQuery = "SELECT * FROM tests WHERE _id in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)"
+        val verbQuery = "SELECT * FROM tests WHERE _id in ${getRandomTasks()}"
         val cursor = database?.rawQuery(verbQuery, null)
 
         val tests =  ArrayList<Task>()

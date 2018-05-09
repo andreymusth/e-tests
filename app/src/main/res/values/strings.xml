@@ -2,4 +2,12 @@
     <string name="app_name">eTests</string>
     <string name="next">next</string>
     <string name="prev">prev</string>
+    <string name="welcome_text">Добро пожаловать в систему тестирования английского языка!</string>
+    <string name="rules">Вам будет предложено ответить на 10 вопросов, случайно выбранных из базы заданий. После прохождения теста рузельтат можно получить на email.</string>
+    <string name="start_tests">Начать тестирование</string>
+    <string name="goodLuck">Удачи!</string>
+    <string name="title_activity_sending_results">SendingResultsActivity</string>
+    <string name="email">Тест успешно пройден. Введите email для отправки результата</string>
+    <string name="send_res">Отправить результат</string>
+    <string name="example_example_com">example@example.com</string>
 </resources>

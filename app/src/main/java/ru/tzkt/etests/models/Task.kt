@@ -1,4 +1,4 @@
-package ru.tzkt.etests
+package ru.tzkt.etests.models
 
 import java.io.Serializable
 
