@@ -2,6 +2,7 @@ package ru.tzkt.etests
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_sending_results.*
@@ -28,19 +29,25 @@ class SendingResultsActivity : AppCompatActivity() {
 
 
         btnSendResults.setOnClickListener {
-            val msg = ResultMessage("Тепло", "sisQa", "andreyrabo@mail.ru", res!!)
+            val msg = ResultMessage("Результаты тестов", "sisQa", etEmail.text.toString(), res!!)
             ApiRepositoryProvider.provideApiRepository(this)
                     .sendTestResults(msg)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
                             {handleRes(it)},
-                            {it.printStackTrace()}
+                            {run {
+                                Toast.makeText(this, "При отправке результатов произошли ошибки", Toast.LENGTH_SHORT).show()
+                                it.printStackTrace()}}
                     )
         }
     }
 
     private fun handleRes(res: Result<Void>) {
-        val g = 0
+        if (res.response()?.code() == 200) {
+            Toast.makeText(this, "Результаты успешно отправлены", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "При отправке результатов произошли ошибки", Toast.LENGTH_SHORT).show()
+        }
     }
 }
