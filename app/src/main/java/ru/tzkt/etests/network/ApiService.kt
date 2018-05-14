@@ -11,20 +11,27 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.Header
 import retrofit2.http.POST
-import ru.tzkt.etests.models.Message
+import ru.tzkt.etests.models.ResultMessage
 
 /**
  * Created by user on 10.04.2018.
  */
 interface ApiService {
 
-    @POST("api/$apiVersion/tests")
-    fun sendTestResults(@Header("Content-Type") contentType: String, @Body message: Message): Observable<Result<Void>>
+    @POST("sendmail")
+    fun sendTestResults(@Header("Content-Type") contentType: String, @Body message: ResultMessage): Observable<Result<Void>>
 
     companion object Factory {
 
-        private const val apiVersion = "v1"
-        private const val HOST_URL = "sdfsdfsdf.ru"
+//        POST https://systems.moscow/sendmail
+//        {
+//            "subject":"Тепло",
+//            "secret":"sisQa",
+//            "mail":"a@b.ru",
+//            "message":"Сообщение"
+//        }
+
+        private const val HOST_URL = "https://systems.moscow/"
 
 
         fun create(context: Context): ApiService {
