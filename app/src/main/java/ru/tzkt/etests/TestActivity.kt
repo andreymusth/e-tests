@@ -75,6 +75,13 @@ class TestActivity : AppCompatActivity() {
 
             val answerVariant = if (answers.contains(index)) answers[index] else 1
 
+//            try {
+//                getLetteredAnswerVariant(task.rightAnswerNum)
+//                task.variants[task.rightAnswerNum - 1]
+//            } catch (e: Exception) {
+//                e.printStackTrace()
+//            }
+
             res += "Вопрос ${index + 1} \n" +
                     "Текст вопроса: \n" +
                     "${task.taskText} \n" +
