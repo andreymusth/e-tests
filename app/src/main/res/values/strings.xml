@@ -4,10 +4,15 @@
     <string name="prev">prev</string>
     <string name="welcome_text">Добро пожаловать в систему тестирования английского языка!</string>
     <string name="rules">Вам будет предложено ответить на 10 вопросов, случайно выбранных из базы заданий. После прохождения теста рузельтат можно получить на email.</string>
-    <string name="start_tests">Начать тестирование</string>
+    <string name="start_tests">Начать</string>
     <string name="goodLuck">Удачи!</string>
     <string name="title_activity_sending_results">SendingResultsActivity</string>
-    <string name="email">Тест успешно пройден. Введите email для отправки результата</string>
+    <string name="email">Тест успешно пройден. Результат теста будет отправлен на email:</string>
     <string name="send_res">Отправить результат</string>
     <string name="example_example_com">example@example.com</string>
+    <string name="settings">Настройки</string>
+    <string name="email_hint">Введите email на который по умолчанию будет отправляться результат теста. Позже его можно изменить в настройках.</string>
+    <string name="ok">OK</string>
+    <string name="email_choose">Выбрать другой email</string>
+    <string name="email_new">Можете указать новый адрес (тогда будет выбран он) или выбрать существущий</string>
 </resources>

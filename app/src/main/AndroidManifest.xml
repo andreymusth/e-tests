@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.tzkt.etests">
 
-
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +19,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SendingResultsActivity"></activity>
+        <activity
+            android:name=".SendingResultsActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SettingsTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".db.EmailsContentProvider"
+            android:authorities="ru.tzkt.etests.EMAILS_CONTENT_URI"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".EmailChooseActivity"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

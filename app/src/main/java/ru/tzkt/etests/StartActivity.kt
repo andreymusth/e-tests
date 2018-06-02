@@ -1,11 +1,15 @@
 package ru.tzkt.etests
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import android.view.Menu
+import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_start.*
+import ru.tzkt.etests.settings.SettingsActivity
 import ru.tzkt.etests.startfragments.RulesFragment
 import ru.tzkt.etests.startfragments.StartTestsFragment
 import ru.tzkt.etests.startfragments.WelcomeFragment
@@ -39,5 +43,25 @@ class StartActivity : AppCompatActivity() {
         override fun getCount(): Int {
             return 3
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+
+        when (item?.itemId) {
+
+            R.id.settings -> {
+                startActivity(Intent(this, SettingsActivity::class.java))
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+
+
     }
 }

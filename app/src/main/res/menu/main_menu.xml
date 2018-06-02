@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/settings"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+
+    <!--<item-->
+        <!--android:id="@+id/statistics"-->
+        <!--android:title="@string/statistics"-->
+        <!--app:showAsAction="never" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/adviceAFriend"-->
+        <!--android:title="@string/advice_a_friend"-->
+        <!--app:showAsAction="never" />-->
+
+    <!--<item android:id="@+id/introduction"-->
+        <!--android:title="@string/introduction"-->
+        <!--app:showAsAction="never"/>-->
+
+    <!--<item android:id="@+id/about"-->
+        <!--android:title="@string/about"-->
+        <!--app:showAsAction="never"/>-->
+
+</menu>

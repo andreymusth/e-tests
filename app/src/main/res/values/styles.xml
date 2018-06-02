@@ -9,6 +9,10 @@
     </style>
 
 
+    <style name="SettingsTheme" parent="AppTheme">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+
     <style name="RadioButtonStyle" parent="AppTheme">
         <item name="colorControlNormal">@color/colorBlue</item>
         <item name="colorAccent">@color/colorLightGreen</item>

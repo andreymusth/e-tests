@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:key="rootKey"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="defaultEmail"
+        android:title="Email" />
+
+    <!--<ListPreference-->
+        <!--android:key="difficulty_levels"-->
+        <!--android:title="@string/difficulty"-->
+        <!--android:entries="@array/difficulty_titles"-->
+        <!--android:entryValues="@array/difficulty_values"/>-->
+
+    <!--<ListPreference-->
+        <!--android:key="notification_period"-->
+        <!--android:title="@string/notify_to_learn"-->
+        <!--android:entries="@array/notify_learning_titles"-->
+        <!--android:entryValues="@array/notify_learning_values"/>-->
+
+</PreferenceScreen>
